@@ -18,11 +18,14 @@ fetch_cats_helper <- function(page = 0) {
     str_subset("/adoptions/pet-details/\\d+") %>%
     str_extract("\\d+$")
   if (length(cat_ids) < 1) {
+    ## base case
     message("  no more cat listings, over and out")
-    return(cat_ids)
+    cat_ids
+  } else {
+    ## recursive case
+    message("  ", length(cat_ids), " cat listings found")
+    c(cat_ids, fetch_cats_helper(page + 1))
   }
-  message("  ", length(cat_ids), " cat listings found")
-  return(c(cat_ids, fetch_cats_helper(page + 1)))
 }
 
 message("Accessing San Francisco SPCA (Cat Department)...")
