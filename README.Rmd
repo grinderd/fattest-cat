@@ -1,0 +1,44 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+> Some cats are born fat, some achieve fatness, others have fatness thrust upon them.
+
+An [#rstats](https://twitter.com/hashtag/rstats) tribute script, in honor of the very charming [lexiross/fattest-cat](https://github.com/lexiross/fattest-cat), a script to find the fattest [cat currently up for adoption at SF SPCA](https://www.sfspca.org/adoptions/cats). Why should JavaScript have all the fun?
+
+Incidentally, this makes a pretty good demo of using the [tidyverse](https://blog.rstudio.org/2016/09/15/tidyverse-1-0-0/) to work in a style I call [Data Rectangling](https://speakerdeck.com/jennybc/data-rectangling).
+
+## Install and call
+
+From a shell
+
+```
+wget https://raw.githubusercontent.com/jennybc/fattest-cat/master/fattest-cat.R
+chmod +x fattest-cat.R
+./fattest-cat.R
+```
+
+From R
+
+```{r eval = FALSE}
+url <- "https://raw.githubusercontent.com/jennybc/fattest-cat/master/fattest-cat.R"
+rfile <- basename(url)
+download.file(url, rfile)
+source(rfile)
+```
+
+## Demo
+
+```{sh, cache = TRUE}
+./fattest-cat.R
+```
