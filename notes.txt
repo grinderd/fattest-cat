@@ -1,0 +1,12 @@
+#' Notes about the fattest cat code to document as I go.
+#'
+
+
+Packages:
+rvest - https://stat4701.github.io/edav/2015/04/02/rvest_tutorial/
+  
+  
+httr - 
+
+
+modifyurl
